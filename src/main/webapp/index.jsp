@@ -20,7 +20,7 @@
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="login">
                         Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
+                        <input type="text" name="email" value="someone@somewhere.com">
                         <br>
                         Password:<br>
                         <input type="password" name="password" value="sesam">
@@ -46,6 +46,9 @@
                 </td>
             </tr>
         </table>
+        
+        <a href="FrontController?command=help"><button>Få hjælp til din bestilling</button> </a>
+        
         <% String error = (String) request.getAttribute( "error");
            if ( error != null) { %>
            <H2>Error!!</h2>

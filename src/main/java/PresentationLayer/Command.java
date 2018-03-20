@@ -13,6 +13,9 @@ abstract class Command {
         commands = new HashMap<>();
         commands.put( "login", new Login() );
         commands.put( "register", new Register() );
+        commands.put("help", new Help());
+        commands.put("order", new Order());
+        commands.put("shop", new Shop());
     }
 
     static Command from( HttpServletRequest request ) {
