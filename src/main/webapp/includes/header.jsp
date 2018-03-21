@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="Datbase.User"%>
+<%@page import="FunctionLayer.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,5 +9,12 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <% 
+    User user = (User)session.getAttribute("user");
+
+
+    %>
+
+    
          <%@include file="menu.jsp" %>
         

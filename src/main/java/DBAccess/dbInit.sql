@@ -13,6 +13,14 @@ CREATE TABLE `Users` (
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
+CREATE TABLE `order` (
+`orderID` int(11) NOT NULL AUTO_INCREMENT,
+`height`int(11) NOT NULL,
+`length`int(11) NOT NULL,
+`width`int(11) NOT NULL,
+primary key (orderID)
+);
+
 LOCK TABLES `Users` WRITE;
 INSERT INTO `Users` VALUES 
 (1,'jens@somewhere.com','jensen','customer'),

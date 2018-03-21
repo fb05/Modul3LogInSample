@@ -1,18 +1,23 @@
-<%-- 
-    Document   : shop
-    Created on : 20-03-2018, 12:11:32
-    Author     : simon
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Shop</title>
-    </head>
-    <body>
+<%@include file="//includes/header.jsp" %>
         <h1>Shop</h1>
         Her kan du bestille din ordre!
-    </body>
-</html>
+
+    Velkommen <%=user.getEmail()%>
+        <table>
+            <tr><td>Afgiv ordre</td>
+                <td>
+                    <form name="shop" action="FrontController" method="POST">
+                        <input type="hidden" name="command" value="shop">
+                        Length:<br>
+                        <input type="number" name="length" value="5">
+                        <br>
+                        Width:<br>
+                        <input type="number" name="width" value="5">
+                        <br>
+                        Height:<br>
+                        <input type="number" name="height" value="5">
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+<%@include file="//includes/footer.jsp" %>
