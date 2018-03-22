@@ -6,7 +6,7 @@
         <table>
             <tr><td>Afgiv ordre</td>
                 <td>
-                    <form name="shop" action="FrontController" method="POST">
+                    <form name="shop" action="FrontController?command=addorder" method="POST">
                         <input type="hidden" name="command" value="shop">
                         Length:<br>
                         <input type="number" name="length" value="5">
@@ -17,7 +17,7 @@
                         Height:<br>
                         <input type="number" name="height" value="5">
                         <br>
-                        <input type="submit" value="Submit">
+                        <a href="FrontController?command=addorder"><button>Tilføj ordre</button></a>
                     </form>
                 </td>
 <%@include file="//includes/footer.jsp" %>
