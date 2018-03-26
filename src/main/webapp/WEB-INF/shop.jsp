@@ -6,8 +6,8 @@
         <table>
             <tr><td>Afgiv ordre</td>
                 <td>
-                    <form name="shop" action="FrontController?command=addorder" method="POST">
-                        <input type="hidden" name="command" value="shop">
+                    <form name="shop" action="FrontController" method="POST">
+                        <input type="hidden" name="command" value="addorder">
                         Length:<br>
                         <input type="number" name="length" value="5">
                         <br>

@@ -68,10 +68,7 @@ res[1] = sumMed;
 res[2] = sumSmall;
 }
 
-    for(int i = 0; i < res.length; i++)
-    {
-        System.out.println(res[i]);
-    }
+
     
 return res;
 }    
@@ -146,7 +143,6 @@ return res;
         bricks[0] = countLarge;
         bricks[1] = countMed;
         bricks[2] = countSmall;
-        System.out.println("S2  "+countSmall);
         return bricks;
     }
     
@@ -222,14 +218,9 @@ return res;
         bricks[0] = countLarge;
         bricks[1] = countMed;
         bricks[2] = countSmall;
-            System.out.println("W2  "+countSmall);
         return bricks;
         }
         
         
-    public static void main(String[] args) {
-        Calc c = new Calc();
-        c.result(2, 4, 6);
-        
-    }
+
 }

@@ -22,13 +22,14 @@ public class AddOrder extends Command{
         int getwidth = Integer.parseInt(request.getParameter( "width" ));
         int getheight = Integer.parseInt(request.getParameter( "height" ));
 
-        HttpSession session = request.getSession();
-        session.setAttribute("length", getlength);
-        session.setAttribute("width", getwidth);
-        session.setAttribute("height", getheight);
         
-  //      Calc a = new Calc();
-  //      a.sideCalc1(getlength);
+        
+        
+        Calc itemList = new Calc();
+        int[] result = itemList.result(getheight, getlength, getwidth);
+        
+        request.setAttribute("itemlist", result);
+        
         return "order";
     }
     

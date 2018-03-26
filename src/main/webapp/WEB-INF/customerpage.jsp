@@ -16,6 +16,6 @@
         You are now logged in as a customer of our wonderful site.
         
         <a href="FrontController?command=shop"><button>Gå til shoppen</button> </a>
-        <a href="FrontController?command=order"><button>Gå til ordre</button> </a>
+        <a href="FrontController?command=oldorders"><button>Gå til ordre</button> </a>
     </body>
 </html>
