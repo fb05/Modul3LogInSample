@@ -5,62 +5,27 @@
  */
 package PresentationLayer;
 
+import DBAccess.UserMapper;
+import FunctionLayer.LogicFacade;
+import FunctionLayer.LoginSampleException;
+import FunctionLayer.Order;
+import java.util.HashSet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession; 
 /**
  *
  * @author simon
  */
-public class ViewOrder {
+public class ViewOrder extends Command {
 
-    int orderID;
-    int height;
-    int length;
-    int width;
-
-    public ViewOrder(int orderID) {
-        this.orderID = orderID;
+    @Override
+    String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException
+    {   
+        UserMapper.getOrder(1);
+        
+        
+        return "order";
+        
     }
-
-    public ViewOrder(int orderID, int height, int length, int width) {
-        this.orderID = orderID;
-        this.height = height;
-        this.length = length;
-        this.width = width;
-    }
-    
-
-    public int getOrderID() {
-        return orderID;
-    }
-
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-    
-    
-
-    
 }

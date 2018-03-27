@@ -5,7 +5,10 @@
  */
 package PresentationLayer;
 
+import DBAccess.UserMapper;
+import FunctionLayer.Calc;
 import FunctionLayer.LoginSampleException;
+import FunctionLayer.User;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -29,7 +32,8 @@ public class AddOrder extends Command{
         int[] result = itemList.result(getheight, getlength, getwidth);
         
         request.setAttribute("itemlist", result);
-        
+        User user = (User)request.getSession().getAttribute("user");
+        UserMapper.createOrder(user, getheight, getlength, getwidth);
         return "order";
     }
     
